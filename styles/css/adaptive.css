@@ -6,6 +6,14 @@
   h1 {
     font-size: 56px;
   }
+
+  .facts_content_article_text {
+    padding: 20px;
+  }
+
+  .createfilms_mouse-parallax_bg {
+    left: -22%;
+  }
 }
 @media all and (max-width: 900px) {
   .header_nav a,
@@ -17,8 +25,72 @@
 input[type=submit] {
     width: 200px;
   }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  .facts {
+    min-height: 840px;
+  }
+
+  .facts_content_article:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .facts_content_article_text {
+    min-height: auto;
+  }
+
+  .facts_content {
+    flex-direction: column;
+  }
+
+  .facts_content_article {
+    max-width: 70%;
+    width: 100%;
+  }
+
+  .facts_content_article div {
+    margin-bottom: 0;
+    margin-top: 20px;
+  }
+
+  .facts_content_article img {
+    width: 45px;
+  }
+
+  .createfilms_clients_text:before,
+.facts_content_article_text:before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    top: -20px;
+  }
+
+  .facts h2 {
+    margin-bottom: 0;
+    margin-top: 30px;
+  }
+
+  .facts_more {
+    margin-top: 10px;
+  }
+
+  .photos_content_image {
+    margin-right: 0;
+  }
+
+  .createfilms_title_text {
+    padding-top: 8%;
+    margin-right: 2%;
+  }
+
+  .createfilms_clients_text {
+    margin-top: 22px;
+  }
 }
-@media all and (max-width: 760px) {
+@media all and (max-width: 768px) {
   header {
     height: 100px;
     padding-right: 80px;
@@ -71,10 +143,189 @@ input[type=submit] {
     flex-direction: column;
     background: linear-gradient(180deg, #faff00 0%, #f0d512 100%);
   }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  .steps h2 {
+    margin-bottom: 60px;
+  }
+
+  .steps_content_connection {
+    min-width: 15px;
+  }
+
+  .steps_content_request {
+    padding: 35px 15px 15px 15px;
+  }
+
+  h1 {
+    font-size: 48px;
+    line-height: 54px;
+  }
+  h1 span {
+    font-size: 40px;
+    line-height: 45px;
+  }
+
+  .createfilms_title {
+    margin-bottom: 3%;
+  }
+
+  .createfilms_clients img {
+    margin-bottom: 0px;
+  }
+
+  .createfilms_clients_text {
+    max-width: 85%;
+    padding: 10px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .createfilms_clients_text > div:first-child {
+    width: 100%;
+  }
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 550px) {
   .header_button {
     display: none;
+  }
+
+  .facts_content_article_text {
+    padding: 15px;
+  }
+  .facts_content_article_text p {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .photos_content {
+    flex-direction: column;
+  }
+
+  .photos_content_image {
+    max-width: 100%;
+    min-height: 450px;
+  }
+
+  .photos_content_text {
+    width: 100%;
+  }
+
+  .steps_content {
+    flex-direction: column;
+  }
+
+  .steps_content_request {
+    max-width: 90%;
+    min-height: auto;
+    margin-bottom: 35px;
+  }
+
+  .steps_content_request:nth-child(3) {
+    transform: translateY(0px);
+  }
+
+  .steps_content_connection {
+    display: none;
+  }
+
+  .steps h2 {
+    margin-bottom: 30px;
+  }
+
+  .steps_content_request h4 {
+    margin-bottom: 10px;
+  }
+
+  .createfilms_title_video {
+    display: none;
+  }
+
+  .createfilms_title_text {
+    max-width: 100%;
+  }
+
+  .createfilms_title_text {
+    padding-top: 0;
+  }
+
+  .createfilms {
+    min-height: 610px;
+    background-position-y: bottom;
+    padding: 100px 0 60px 0;
+  }
+
+  h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  h1 span {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+@media all and (max-width: 450px) {
+  .facts_content_article {
+    max-width: 85%;
+    width: 100%;
+  }
+
+  h4 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  h2 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .photos_content_image {
+    display: none;
+  }
+
+  .photos h2 {
+    margin-bottom: 15px;
+  }
+
+  .photos_content_text {
+    font-size: 12px;
+  }
+
+  .photos {
+    min-height: auto;
+  }
+
+  .steps_content_request p {
+    font-size: 12px;
+  }
+
+  .createfilms_clients_text {
+    flex-direction: column;
+  }
+
+  .createfilms_clients {
+    padding-left: 10px;
+  }
+
+  h1 {
+    margin-bottom: 16px;
+  }
+
+  .createfilms {
+    min-height: 500px;
+    background-position-y: bottom;
+    padding: 100px 0 60px 0;
   }
 }
 

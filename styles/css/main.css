@@ -179,7 +179,7 @@ header .container {
 }
 .createfilms_title_video {
   position: relative;
-  padding: 134px 0 0 60px;
+  padding: 12% 0 0 0;
   box-sizing: border-box;
 }
 .createfilms_title_video img {
@@ -203,7 +203,8 @@ header .container {
   height: 110%;
   background-image: url(../../images/parallax_mouse.png);
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: top left;
+  background-size: contain;
 }
 
 .scroll-parallax_bg {
@@ -241,7 +242,8 @@ header .container {
 .createfilms_title_text {
   max-width: 52%;
   width: 100%;
-  padding-top: 135px;
+  padding-top: 13%;
+  margin-right: 5%;
 }
 .createfilms_title_text p {
   font-weight: 600;
@@ -571,11 +573,14 @@ header .container {
   min-height: 710px;
 }
 .photos_content_image {
-  max-width: 638px;
+  max-width: 57%;
   width: 100%;
-  height: 616px;
+  min-height: 591px;
   background-image: url(../../images/photos_bg.png);
   margin-right: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .photos_content_text {
@@ -588,6 +593,7 @@ header .container {
 .photos_content_text button {
   width: 282px;
   height: 50px;
+  margin-bottom: 20px;
 }
 .photos_content_text p {
   margin-bottom: 15px;
@@ -607,7 +613,7 @@ header .container {
 
 .steps_content_request {
   position: relative;
-  width: 350px;
+  max-width: 31.5%;
   min-height: 232px;
   background: linear-gradient(90deg, #efce15 0%, #eea517 52.6%, #f88127 100%);
   border-radius: 10px;
@@ -661,7 +667,7 @@ header .container {
 }
 
 .steps_content_connection {
-  width: 30px;
+  min-width: 30px;
   height: 30px;
   background: linear-gradient(90deg, #f78326 10.22%, #eea517 68.95%, #efca15 120.03%);
   transform: translateY(-44px);
