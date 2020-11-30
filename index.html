@@ -11,13 +11,14 @@
     <link rel="stylesheet" href="./styles/css/slick.css" />
     <link rel="stylesheet" href="./styles/css/slick-theme.css" />
     <link type="text/css" rel="stylesheet" href="./styles/css/main.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
+        <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link type="text/css" rel="stylesheet" href="./styles/css/adaptive.css" />
   </head>
   <body>
+    <div class="wrapper">
     <header>
       <div class="container">
         <div class="header_logo">
@@ -28,15 +29,19 @@
           />
         </div>
         <div class="header_nav">
+          <div class="header_nav_button">
+                      </div>
+         <div class="header_nav_menu">
           <a href="#">Главная</a>
           <a href="#">Услуги</a>
           <a href="#">Цены</a>
           <a href="#">Наши видео</a>
         </div>
-        <div class="header_play"></div>
-        <div class="header_button">
+        </div>
+                <div class="header_button">
           <button>Заказать фильм</button>
         </div>
+        
       </div>
     </header>
     <main>
@@ -58,8 +63,11 @@
             </div>
             <div class="createfilms_title_video">
               <div class="createfilms_mouse-parallax_bg"></div>
-              <img src="./images/vidoe_create.jpg" alt="video" />
-              <!-- gtfhjrth -->
+
+              <div>
+                <img src="./images/vidoe_create.jpg" alt="video" />
+              </div>
+             
             </div>
           </div>
           <div class="createfilms_clients">
@@ -85,14 +93,12 @@
       <section class="theme">
         <div class="container">
           <h2>Темы для слайд-шоу</h2>
-
           <div class="theme_slider">
             <div>
               <div class="theme_slider_text">
                 <h4>На праздник</h4>
                 <h6>Преподнесите<br />имениннику оригинальный подарок</h6>
               </div>
-
               <div class="theme_slider_element celebration">
                 <div></div>
               </div>
@@ -121,8 +127,11 @@
             </div>
             <div>
               <div class="theme_slider_text">
-                <h4>На праздник</h4>
-                <h6>Преподнесите<br />имениннику оригинальный подарок</h6>
+                <h4>Юбилей</h4>
+                <h6>
+                  Лучшие фото и<br />видео моменты из<br />
+                  жизни юбиляра
+                </h6>
               </div>
               <div class="theme_slider_element celebration">
                 <div></div>
@@ -130,10 +139,76 @@
             </div>
             <div>
               <div class="theme_slider_text">
-                <h4>Семейный фильм</h4>
+                <h4>Выписка<br />из роддома</h4>
                 <h6>
-                  Соберите всех родственников за просмотром семейного фильма
+                  Фильм про волшебный<br />период жизни, который<br />Вы
+                  покажете детям
                 </h6>
+              </div>
+              <div class="theme_slider_element family">
+                <div></div>
+              </div>
+            </div>
+            <div>
+              <div class="theme_slider_text">
+                <h4>Свадьба</h4>
+                <h6>
+                  История вашего<br />главного дня. В новой<br />интерпретации
+                </h6>
+              </div>
+              <div class="theme_slider_element family">
+                <div></div>
+              </div>
+            </div>
+            <div>
+              <div class="theme_slider_text">
+                <h4>Lovestory</h4>
+                <h6>
+                  Лучший способ заявить<br />
+                  о своих чувствах
+                </h6>
+              </div>
+              <div class="theme_slider_element family">
+                <div></div>
+              </div>
+            </div>
+            <div>
+              <div class="theme_slider_text">
+                <h4>Детский праздник</h4>
+                <h6>
+                  Ваш ребенок будет в<br />
+                  восторге. Это точно!
+                </h6>
+              </div>
+              <div class="theme_slider_element family">
+                <div></div>
+              </div>
+            </div>
+            <div>
+              <div class="theme_slider_text">
+                <h4>Видеомонтаж</h4>
+                <h6>
+                  Из гигабайтов видео в<br />структурированный фильм.<br />Мы
+                  поможем
+                </h6>
+              </div>
+              <div class="theme_slider_element family">
+                <div></div>
+              </div>
+            </div>
+            <div>
+              <div class="theme_slider_text">
+                <h4>Рекламное<br />слайд-шоу</h4>
+                <h6>Про Ваш бизнес.<br />С выигрышной стороны</h6>
+              </div>
+              <div class="theme_slider_element family">
+                <div></div>
+              </div>
+            </div>
+            <div>
+              <div class="theme_slider_text">
+                <h4>Слайд-шоу<br />вечная память</h4>
+                <h6>О тех, кто ушёл, но навсегда<br />в нашем сердце…</h6>
               </div>
               <div class="theme_slider_element family">
                 <div></div>
@@ -188,8 +263,71 @@
               </div>
             </div>
           </div>
-          <div class="facts_more">
-            <h5>Еще фактов?</h5>
+          <div class="facts_more" >
+            <a href="#popup" class="popup_link">Еще фактов?</a>
+          </div>
+          <div id="popup" class="popup">
+            <div class="popup_body">
+              <div class="popup_content">
+                <a href="#" class="popup_close">
+                  <img src="./images/vector.png" alt="close">
+                </a>
+                <div class="facts_popup_body_content">
+                  <div>
+                    <img src="./images/group.png" alt="image">
+                    <h4>Мы команда профессионалов </h4>
+                  </div>
+                  <div>
+                    <p>Творческая команда «Ваша история» профессионально подходит к созданию роликов. Мы делаем видеоролики из фото, которые имеют свой сюжет и основаны 
+                      на реальных событиях Вашей жизни. </p>
+                  </div>
+                </div>
+                <div class="facts_popup_body_content">
+                  <div>
+                    <img src="./images/list.png" alt="image">
+                    <h4>40 часов до полного выполнения</h4>
+                  </div>
+                  <div>
+                    <p>Минимальный срок, за который делается слайд-шоу — 40 часов. В любом случае, спустя 40 часов Вы получите то, что команда успела сделать за это время.</p>
+                  </div>
+
+                </div>
+                <div class="facts_popup_body_content">
+                  <div>
+                    <img src="./images/group.png" alt="image">
+                    <h4>Индивидуально<br>под каждого</h4>
+                  </div>
+                  <div>
+                    <p>Художники, дизайнеры, аниматоры нашей компании трепетно относятся к каждой работе. Мы создаем слайд-шоу таким, каким хочет видеть его заказчик.</p>
+                  </div>
+                </div>
+                <div class="facts_popup_body_content">
+                  <div>
+                  <img src="./images/group.png" alt="image">
+                  <h4>Воплощаем<br>все ваши идеи</h4>
+                </div>
+                <div>
+                  <p>Вы можете озвучить нам любые свои идеи 
+                    и задумки, чтобы получилось видео, полностью отвечающее вашим пожеланиям 
+                    и представлениям. Если у вас есть примеры слайд-шоу или описание видео, можете прислать их на нашу электронную почту вместе с фотографиями и видео.</p>
+                </div>
+              
+              
+              
+                </div>
+                <div class="facts_popup_body_content">
+                  <div>
+                  <img src="./images/group.png" alt="image">
+                  <h4>Безупречное<br>качество FULL-HD</h4>
+                </div>
+                <div>
+                  <p>Мы создаем высококачественное видео, которое вы сможете смотреть на любом устройстве – на телевизоре, компьютере, проекторе, планшете. Это не ограничивает возможности наших клиентов, желающих продемонстрировать чудесный подарок своей семье или друзьям.</p>
+                </div>
+
+
+
+                </div>
+            </div>
           </div>
         </div>
       </section>
@@ -307,9 +445,17 @@
                 <input type="text" placeholder="Имя" />
                 <input type="email" placeholder="Email" />
                 <select name="" id="">
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
+                  <option value="">Юбилей</option>
+                  <option value="">Выписка из роддома</option>
+                  <option value="">День рождения</option>
+                  <option value="">Свадьба</option>
+                  <option value="">Lovestory</option>
+                  <option value="">Детский праздник</option>
+                  <option value="">Фильм о путешествии</option>
+                  <option value="">Видеомонтаж</option>
+                  <option value="">Рекламное слайд-шоу</option>
+                  <option value="">Слайд-шоу вечная память</option>
+                  <option value="">Семейный фильм</option>
                 </select>
                 <input type="submit" value="Заказать слайд-шоу" />
                 <input id="checkbox" type="checkbox" class="custom_checkbox" />
@@ -319,81 +465,76 @@
                 >
               </form>
             </div>
-            <div class=" scroll-example baron">
-              <div class="scroller">
-                <div class="scroller__content">
-                  <div class="reviews_content_comment">
-                    <div class="reviews_content_comment_title">
-                      <div class="reviews_content_comment_photo"></div>
-                      <div>
-                        <p>Копылов Леонид</p>
-                        <a href="#">Ссылка на отзыв</a>
-                      </div>
-                    </div>
-                    <div class="reviews_conten_comment_text">
-                      <p>
-                        Гарантируем, что Ваши материалы не появятся в сети без
-                        Вашего разрешения. Перед тем, как выкладывать готовые
-                        ролики в портфолио, мы обязательно спрашиваем своих
-                        клиентов о такой возможности.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="reviews_content_comment">
-                    <div class="reviews_content_comment_title">
-                      <div class="reviews_content_comment_photo"></div>
-                      <div>
-                        <p>Копылов Леонид</p>
-                        <a href="#">Ссылка на отзыв</a>
-                      </div>
-                    </div>
-                    <div class="reviews_content_comment_text">
-                      <p>
-                        Гарантируем, что Ваши материалы не появятся в сети без
-                        Вашего разрешения. Перед тем, как выкладывать готовые
-                        ролики в портфолио, мы обязательно спрашиваем своих
-                        клиентов о такой возможности.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="reviews_content_comment">
-                    <div class="reviews_content_comment_title">
-                      <div class="reviews_content_comment_photo"></div>
-                      <div>
-                        <p>Копылов Леонид</p>
-                        <a href="#">Ссылка на отзыв</a>
-                      </div>
-                    </div>
-                    <div class="reviews_content_comment_text">
-                      <p>
-                        Гарантируем, что Ваши материалы не появятся в сети без
-                        Вашего разрешения. Перед тем, как выкладывать готовые
-                        ролики в портфолио, мы обязательно спрашиваем своих
-                        клиентов о такой возможности.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="reviews_content_comment">
-                    <div class="reviews_content_comment_title">
-                      <div class="reviews_content_comment_photo"></div>
-                      <div>
-                        <p>Копылов Леонид</p>
-                        <a href="#">Ссылка на отзыв</a>
-                      </div>
-                    </div>
-                    <div class="reviews_content_comment_text">
-                      <p>
-                        Гарантируем, что Ваши материалы не появятся в сети без
-                        Вашего разрешения. Перед тем, как выкладывать готовые
-                        ролики в портфолио, мы обязательно спрашиваем своих
-                        клиентов о такой возможности.
-                      </p>
-                    </div>
+            <div class="scroll baron">
+              <div class="reviews_content_comment">
+                <div class="reviews_content_comment_title">
+                  <div class="reviews_content_comment_photo"></div>
+                  <div>
+                    <p>Копылов Леонид</p>
+                    <a href="#">Ссылка на отзыв</a>
                   </div>
                 </div>
+                <div class="reviews_conten_comment_text">
+                  <p>
+                    Гарантируем, что Ваши материалы не появятся в сети без
+                    Вашего разрешения. Перед тем, как выкладывать готовые ролики
+                    в портфолио, мы обязательно спрашиваем своих клиентов о
+                    такой возможности.
+                  </p>
+                </div>
               </div>
-                        </div>
-
+              <div class="reviews_content_comment">
+                <div class="reviews_content_comment_title">
+                  <div class="reviews_content_comment_photo"></div>
+                  <div>
+                    <p>Копылов Леонид</p>
+                    <a href="#">Ссылка на отзыв</a>
+                  </div>
+                </div>
+                <div class="reviews_content_comment_text">
+                  <p>
+                    Гарантируем, что Ваши материалы не появятся в сети без
+                    Вашего разрешения. Перед тем, как выкладывать готовые ролики
+                    в портфолио, мы обязательно спрашиваем своих клиентов о
+                    такой возможности.
+                  </p>
+                </div>
+              </div>
+              <div class="reviews_content_comment">
+                <div class="reviews_content_comment_title">
+                  <div class="reviews_content_comment_photo"></div>
+                  <div>
+                    <p>Копылов Леонид</p>
+                    <a href="#">Ссылка на отзыв</a>
+                  </div>
+                </div>
+                <div class="reviews_content_comment_text">
+                  <p>
+                    Гарантируем, что Ваши материалы не появятся в сети без
+                    Вашего разрешения. Перед тем, как выкладывать готовые ролики
+                    в портфолио, мы обязательно спрашиваем своих клиентов о
+                    такой возможности.
+                  </p>
+                </div>
+              </div>
+              <div class="reviews_content_comment">
+                <div class="reviews_content_comment_title">
+                  <div class="reviews_content_comment_photo"></div>
+                  <div>
+                    <p>Копылов Леонид</p>
+                    <a href="#">Ссылка на отзыв</a>
+                  </div>
+                </div>
+                <div class="reviews_content_comment_text">
+                  <p>
+                    Гарантируем, что Ваши материалы не появятся в сети без
+                    Вашего разрешения. Перед тем, как выкладывать готовые ролики
+                    в портфолио, мы обязательно спрашиваем своих клиентов о
+                    такой возможности.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -455,6 +596,136 @@
           </div>
         </div>
       </section>
+      <section class="videoAudio">
+        <div class="container">
+          <div class="videoAudio_video">
+            <h4>Видео отзывы</h4>
+            <div class="scroll_video baron">
+              <div class="videoAudio_video_comment">
+                <div class="videoAudio_video_comment_content">
+                  <div class="videoAudio_video_comment_content_button">
+                    <button></button>
+                  </div>
+                </div>
+                <div class="videoAudio_video_comment_text">
+                  <p>Любовь Михайловна</p>
+                  <p>Слайд-шоу на юбилей</p>
+                  <p>17 февраля 2020</p>
+                </div>
+              </div>
+              <div class="videoAudio_video_comment">
+                <div class="videoAudio_video_comment_content">
+                  <div class="videoAudio_video_comment_content_button">
+                    <button></button>
+                  </div>
+                </div>
+                <div class="videoAudio_video_comment_text">
+                  <p>Любовь Михайловна</p>
+                  <p>Слайд-шоу на юбилей</p>
+                  <p>17 февраля 2020</p>
+                </div>
+              </div>
+              <div class="videoAudio_video_comment">
+                <div class="videoAudio_video_comment_content">
+                  <div class="videoAudio_video_comment_content_button">
+                    <button></button>
+                  </div>
+                </div>
+                <div class="videoAudio_video_comment_text">
+                  <p>Любовь Михайловна</p>
+                  <p>Слайд-шоу на юбилей</p>
+                  <p>17 февраля 2020</p>
+                </div>
+              </div>
+              <div class="videoAudio_video_comment">
+                <div class="videoAudio_video_comment_content">
+                  <div class="videoAudio_video_comment_content_button">
+                    <button></button>
+                  </div>
+                </div>
+                <div class="videoAudio_video_comment_text">
+                  <p>Любовь Михайловна</p>
+                  <p>Слайд-шоу на юбилей</p>
+                  <p>17 февраля 2020</p>
+                </div>
+              </div>
+              <div class="videoAudio_video_comment">
+                <div class="videoAudio_video_comment_content">
+                  <div class="videoAudio_video_comment_content_button">
+                    <button></button>
+                  </div>
+                </div>
+                <div class="videoAudio_video_comment_text">
+                  <p>Любовь Михайловна</p>
+                  <p>Слайд-шоу на юбилей</p>
+                  <p>17 февраля 2020</p>
+                </div>
+              </div>
+              <div class="videoAudio_video_counter">
+                <p>1/3</p>
+              </div>
+            </div>
+          </div>
+          <div class="videoAudio_audio">
+            <h4>Аудио отзывы</h4>
+            <div class="scroll_audio baron">
+              <div class="videoAudio_audio_content_comment">
+                <div class="videoAudio_audio_content_comment_button">
+                  <button></button>
+                </div>
+                <div class="videoAudio_audio_content_comment_text">
+                  <p>Любовь Михайловна</p>
+                  <p>Слайд-шоу на юбилей</p>
+                  <p>17 февраля 2020</p>
+                </div>
+              </div>
+              <div class="videoAudio_audio_content_comment">
+                <div class="videoAudio_audio_content_comment_button">
+                  <button></button>
+                </div>
+                <div class="videoAudio_audio_content_comment_text">
+                  <p>Любовь Михайловна</p>
+                  <p>Слайд-шоу на юбилей</p>
+                  <p>17 февраля 2020</p>
+                </div>
+              </div>
+              <div class="videoAudio_audio_content_comment">
+                <div class="videoAudio_audio_content_comment_button">
+                  <button></button>
+                </div>
+                <div class="videoAudio_audio_content_comment_text">
+                  <p>Любовь Михайловна</p>
+                  <p>Слайд-шоу на юбилей</p>
+                  <p>17 февраля 2020</p>
+                </div>
+              </div>
+              <div class="videoAudio_audio_content_comment">
+                <div class="videoAudio_audio_content_comment_button">
+                  <button></button>
+                </div>
+                <div class="videoAudio_audio_content_comment_text">
+                  <p>Любовь Михайловна</p>
+                  <p>Слайд-шоу на юбилей</p>
+                  <p>17 февраля 2020</p>
+                </div>
+              </div>
+              <div class="videoAudio_audio_content_comment">
+                <div class="videoAudio_audio_content_comment_button">
+                  <button></button>
+                </div>
+                <div class="videoAudio_audio_content_comment_text">
+                  <p>Любовь Михайловна</p>
+                  <p>Слайд-шоу на юбилей</p>
+                  <p>17 февраля 2020</p>
+                </div>
+              </div>
+              <div class="videoAudio_audio_counter">
+                <p>1/3</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="music scroll-parallax">
         <div class="scroll-parallax_bg"></div>
         <div class="container">
@@ -484,8 +755,9 @@
             </div>
             <button>Хочу крутой фильм!</button>
           </div>
-
-          <div class="music_content"></div>
+          <div class="music_content">
+            <img src="./images/music.png" alt="image" />
+          </div>
         </div>
       </section>
     </main>
@@ -513,11 +785,12 @@
         </div>
       </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/baron@3.0.3/baron.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/baron@3.0.3/baron.js"></script>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/baron@3.0.3/baron.js"></script>
     <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./js/slick.js"></script>
- 
+    <script src="./js/popup.js"></script>
+  </div>
   </body>
 </html>
