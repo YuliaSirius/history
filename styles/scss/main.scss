@@ -184,12 +184,11 @@ header {
 .mouse-parallax,
 .scroll-parallax {
   position: relative;
-
 }
 .createfilms_mouse-parallax_bg {
   position: absolute;
   top: 0;
-left: -15%;
+  left: -15%;
   width: 140%;
   height: 110%;
   background-image: url(../../images/parallax_mouse.png);
@@ -310,7 +309,6 @@ left: -15%;
     margin-bottom: 42px;
   }
 }
-
 
 .theme_slider_element {
   position: relative;
@@ -602,7 +600,6 @@ left: -15%;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-
 }
 .photos_content_text {
   font-style: normal;
@@ -754,7 +751,7 @@ left: -15%;
     > div {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: space-around;
     }
   }
 }
@@ -769,9 +766,10 @@ left: -15%;
 }
 .reviews_form {
   position: relative;
+  width: 37%;
   form {
     position: relative;
-    max-width: 410px;
+    max-width: 90%;
     background: #ffc224;
     box-shadow: 0px 10px 40px rgba(109, 45, 9, 0.5);
     border-radius: 10px;
@@ -802,7 +800,7 @@ left: -15%;
 
     input,
     select {
-      width: 350px;
+      max-width: 350px;
       height: 50px;
       background-color: #ffffff;
       border-radius: 5px;
@@ -823,8 +821,7 @@ left: -15%;
 
     label {
       max-width: 300px;
-      width: 100%;
-      font-weight: 600;
+           font-weight: 600;
       font-size: 14px;
       line-height: 17px;
       color: #ffffff;
@@ -857,7 +854,9 @@ left: -15%;
     }
   }
 }
-
+.reviews .scroll {
+  width: 45%;
+}
 .reviews_content {
   position: relative;
   width: 500px;
@@ -872,14 +871,13 @@ left: -15%;
 }
 .reviews_content_comment {
   margin-bottom: 30px;
-  width: 445px;
+  max-width: 445px;
   min-height: 245px;
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   padding: 40px 35px 30px 35px;
   box-sizing: border-box;
   p {
-    font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 17px;
@@ -1140,9 +1138,9 @@ footer {
     background: linear-gradient(180deg, #faff00 0%, #eea517 100%);
     box-shadow: 0px 0px 10px rgba(250, 255, 0, 0.53);
   }
-  .scroller__content {
-    padding-left: 20px;
-  }
+  // .scroller__content {
+  //   padding-left: 20px;
+  // }
 }
 //// video-audio
 .videoAudio {

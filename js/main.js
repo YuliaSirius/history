@@ -1,6 +1,4 @@
-
-let themeSlider = document.querySelector('.theme_slider')
-console.log(document.querySelector('.wrapper').offsetWidth)
+let themeSlider = document.querySelector('.theme_slider');
 if (document.querySelector('.wrapper').offsetWidth > 550) {
   $(document).ready(function () {
     $('.theme_slider').slick({
@@ -11,7 +9,6 @@ if (document.querySelector('.wrapper').offsetWidth > 550) {
       arrows: true,
     });
   });
-
 } else {
   $(document).ready(function () {
     $('.theme_slider').slick({
@@ -69,11 +66,8 @@ $('.mouse-parallax').on('mousemove', (e) => {
           bar: '.scroller__bar',
           barOnCls: o.barOnCls,
           direction: 'v',
-                };
+        };
         baron(n);
-
-        // baron(vParams).baron(hParams);
-
         l(), l();
       });
     };
@@ -100,7 +94,7 @@ $('.mouse-parallax').on('mousemove', (e) => {
             r(this).append(
               '<div class="scroller__bar-wrapper"><div class="scroller__bar"></div></div>'
             );
-             });
+        });
         let n = {
           root: o.root,
           scroller: '.scroller',
