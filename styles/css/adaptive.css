@@ -76,6 +76,10 @@
   .music_content img {
     width: 72%;
   }
+
+  .works_content {
+    justify-content: space-around;
+  }
 }
 @media all and (max-width: 900px) {
   .header_nav a,
@@ -238,6 +242,22 @@ input[type=submit] {
   .popup_content {
     max-width: 85%;
   }
+
+  .works_slider {
+    margin: 0 auto 20px auto;
+  }
+
+  .works h2 {
+    margin-bottom: 20px;
+  }
+
+  .works_slider {
+    max-width: 450px;
+  }
+
+  .works {
+    padding-top: 0;
+  }
 }
 @media all and (max-width: 768px) {
   header {
@@ -256,18 +276,33 @@ input[type=submit] {
   }
 
   .navOpen {
+    -webkit-animation: navOpen 300ms linear forwards;
     animation: navOpen 300ms linear forwards;
   }
 
+  @-webkit-keyframes navOpen {
+    100% {
+      transform: translateX(calc(100vw - 200px));
+    }
+  }
   @keyframes navOpen {
     100% {
       transform: translateX(calc(100vw - 200px));
     }
   }
   .navClose {
+    -webkit-animation: navClose 300ms linear forwards;
     animation: navClose 300ms linear forwards;
   }
 
+  @-webkit-keyframes navClose {
+    0% {
+      transform: translateX(calc(100vw - 200px));
+    }
+    100% {
+      transform: translateX(calc(100vw - 50px));
+    }
+  }
   @keyframes navClose {
     0% {
       transform: translateX(calc(100vw - 200px));
@@ -442,6 +477,11 @@ input[type=submit] {
 
   .footer_logo {
     padding-top: 0;
+  }
+
+  .works_content_item {
+    max-width: 250px;
+    height: 200px;
   }
 }
 @media all and (max-width: 550px) {
@@ -641,6 +681,14 @@ input[type=submit] {
   .popup_content {
     max-width: 73%;
   }
+
+  .works_slider p {
+    font-size: 16px;
+  }
+
+  .works_content_item {
+    margin-bottom: 10px;
+  }
 }
 @media all and (max-width: 450px) {
   .facts_content_article {
@@ -720,6 +768,10 @@ input[type=submit] {
 
   footer .container > div:nth-child(3) {
     display: none;
+  }
+
+  .works_slider {
+    max-width: 200px;
   }
 }
 
