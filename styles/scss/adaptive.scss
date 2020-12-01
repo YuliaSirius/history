@@ -11,6 +11,11 @@
   .createfilms_mouse-parallax_bg {
     left: -22%;
   }
+  .music_content {
+    img {
+      width: 98%;
+    }
+  }
 }
 
 @media all and (max-width: 1140px) {
@@ -50,6 +55,19 @@
   }
   .price_content_item h4 {
     margin-bottom: 5px;
+  }
+  .music_content {
+    img {
+      width: 95%;
+    }
+  }
+  .music_content {
+    position: absolute;
+    right: -25%;
+    top: 5%;
+    img {
+      width: 72%;
+    }
   }
 }
 
@@ -166,6 +184,27 @@
   .theme h2 {
     margin-bottom: 30px;
   }
+  .music_content {
+    display: none;
+  }
+  .music_description {
+    max-width: 95%;
+  }
+  .music {
+    min-height: 400px;
+    padding-top: 0;
+  }
+  .music_description button {
+    margin-bottom: 30px;
+  }
+  .popup_content {
+     
+      padding: 30px;
+  }
+  .popup_content {
+    
+    max-width: 85%;
+}
 }
 
 @media all and (max-width: 768px) {
@@ -213,7 +252,7 @@
   .header_nav_menu {
     width: 100%;
     display: flex;
-    padding-top: 30px;
+    padding-top: 10px;
     padding-bottom: 50px;
     padding-left: 10px;
     flex-direction: column;
@@ -287,7 +326,9 @@
     padding: 20px;
   }
   .reviews_form form input,
-  .reviews_form form select {
+  .reviews_form form select,
+  .reviews_form form .select
+   {
     margin-bottom: 12px;
   }
   .reviews_content_comment p {
@@ -295,6 +336,50 @@
   }
   .price_content_item {
     max-width: 260px;
+  }
+  .videoAudio .container {
+    flex-direction: column;
+  }
+  .videoAudio_video {
+    max-width: 100%;
+  }
+  .videoAudio_audio {
+    width: 70%;
+  }
+  .videoAudio {
+    h4 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+  }
+  .videoAudio_audio {
+    margin: 40px auto 0 auto;
+  }
+  .videoAudio {
+    min-height: 850px;
+  }
+  .videoAudio_audio_content_comment {
+    height: 80px;
+  }
+  .videoAudio_audio .baron {
+    height: 300px;
+  }
+  .videoAudio_audio .scroller__bar-wrapper {
+    top: calc(50% - 150px);
+    max-height: 300px;
+  }
+  .footer_nav {
+    display: none;
+  }
+  footer .container {
+    justify-content: space-around;
+    height: 100px;
+  }
+  footer {
+    height: 100px;
+  }
+  .footer_logo {
+    padding-top: 0;
   }
 }
 
@@ -418,7 +503,7 @@
     width: 100%;
   }
 
-  .container {
+  .reviews .container {
     padding: 0;
   }
   .price_content_item {
@@ -431,14 +516,34 @@
   .price_content .fifth {
     min-height: 160px;
     height: 100%;
-}
+  }
   .price_content_item p {
     font-size: 12px;
     line-height: 16px;
+  }
+  .price {
+    padding-top: 20px;
+  }
+  .videoAudio_video_comment {
+    min-width: 250px;
+  }
+  .videoAudio_video_comment_content {
+    min-width: 250px;
+  }
+  .facts_popup_body_content p {
+  
+    font-size: 12px;
+    line-height: 15px;
 }
-.price {
- 
-  padding-top: 20px;
+.facts_popup_body_content > div:first-child {
+
+  margin-bottom: 0;
+}
+.facts_popup_body_content > div img {
+display: none;
+}
+.popup_content {
+  max-width: 73%;
 }
 }
 
@@ -492,5 +597,19 @@
   .theme_slider .slick-prev {
     left: 10%;
     top: 74%;
+  }
+  .videoAudio_video_comment {
+    min-width: 200px;
+  }
+  .videoAudio_video_comment_content {
+    min-width: 200px;
+  }
+  .music_description {
+    max-width: 100%;
+  }
+  footer .container {
+    > div:nth-child(3) {
+      display: none;
+    }
   }
 }

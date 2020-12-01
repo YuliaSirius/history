@@ -146,6 +146,7 @@ header {
   top: 0;
   z-index: 10;
   padding-top: 20px;
+  overflow: hidden;
 }
 header .container {
   height: 100%;
@@ -535,7 +536,7 @@ header .container {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 920px;
+  max-width: 70%;
   height: 647px;
   background: linear-gradient(180deg, #faff00 0%, #f0d512 100%);
   box-shadow: 0px 20px 30px rgba(109, 45, 9, 0.4);
@@ -551,10 +552,9 @@ header .container {
 }
 
 .facts_popup_body_content {
-  max-width: 348px;
-  width: 100%;
-  margin-right: 20px;
-  margin-bottom: 15px;
+  width: 48%;
+  margin-right: 2%;
+  margin-bottom: 2%;
 }
 .facts_popup_body_content > div:first-child {
   display: flex;
@@ -768,8 +768,10 @@ header .container {
   margin-bottom: 20px;
 }
 .reviews_form form input,
-.reviews_form form select {
+.reviews_form form select,
+.reviews_form form .select {
   max-width: 350px;
+  width: 100%;
   height: 50px;
   background-color: #ffffff;
   border-radius: 5px;
@@ -787,7 +789,7 @@ header .container {
   line-height: 17px;
   color: #a1a1a1;
 }
-.reviews_form form label {
+.reviews_form form label[for=checkbox] {
   max-width: 300px;
   font-weight: 600;
   font-size: 14px;
@@ -795,14 +797,14 @@ header .container {
   color: #ffffff;
   padding-left: 40px;
 }
-.reviews_form form label span {
+.reviews_form form label[for=checkbox] span {
   text-decoration-line: underline;
   color: #f5652b;
 }
 .reviews_form form .custom_checkbox {
   display: none;
 }
-.reviews_form form label::before {
+.reviews_form form label[for=checkbox]::before {
   position: absolute;
   left: 30px;
   content: "";
@@ -894,6 +896,33 @@ header .container {
   background-position: 50%;
   border-radius: 50%;
   margin-right: 17px;
+}
+
+.reviews form select {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #a1a1a1;
+  appearance: none;
+  cursor: pointer;
+}
+.reviews form .select {
+  position: relative;
+  height: 50px;
+  padding: 0;
+}
+.reviews form .select:after {
+  content: url(../../images/svg/arrowSelect.svg);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  right: 30px;
+  top: calc(50% - 12.5px);
+  padding: 3px 8px;
+  position: absolute;
+  pointer-events: none;
+  background: linear-gradient(180deg, #faff00 0%, #efce15 100%);
+  box-sizing: border-box;
 }
 
 .price {
@@ -999,6 +1028,7 @@ header .container {
 .music {
   min-height: 610px;
   padding-top: 19px;
+  overflow: hidden;
 }
 .music h2 {
   text-decoration: none;
@@ -1011,8 +1041,7 @@ header .container {
 }
 
 .music_description {
-  max-width: 540px;
-  width: 100%;
+  max-width: 48%;
 }
 .music_description button {
   width: 282px;
@@ -1100,12 +1129,13 @@ footer .container {
 }
 
 .videoAudio_video {
-  max-width: 830px;
+  max-width: 74%;
   margin-right: 10px;
   height: 100%;
+  margin-right: 1%;
 }
 .videoAudio_video .baron {
-  width: 830px;
+  width: 100%;
   height: 100%;
   position: relative;
   overflow-x: scroll;
@@ -1118,7 +1148,8 @@ footer .container {
 .videoAudio_video .scroller__bar-wrapper {
   display: block !important;
   position: absolute;
-  width: 830px;
+  max-width: 830px;
+  width: 100%;
   height: 14px;
   background: rgba(196, 196, 196, 0.1);
   border-radius: 100px;
@@ -1178,16 +1209,22 @@ footer .container {
 }
 
 .videoAudio_audio_counter {
+  bottom: 5px;
+}
+
+.videoAudio_audio_counter {
   left: 80%;
 }
 
 .scroll_audio {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 0px 7px 7px 0px;
+  padding-bottom: 30px;
+  box-sizing: border-box;
 }
 
 .videoAudio_audio {
-  width: 270px;
+  width: 25%;
   height: 360px;
 }
 .videoAudio_audio .baron {
