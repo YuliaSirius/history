@@ -413,14 +413,14 @@ header .container {
   box-shadow: 0px 0px 10px #faff00;
 }
 .theme_slider .slick-next {
-  right: 450px;
+  right: 40%;
   top: 106.3%;
 }
 .theme_slider .slick-next:before {
   content: url(../../images/svg/arrow_right.svg);
 }
 .theme_slider .slick-prev {
-  left: 427px;
+  left: 39%;
   top: 106.3%;
 }
 .theme_slider .slick-prev:before {
