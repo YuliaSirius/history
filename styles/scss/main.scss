@@ -16,7 +16,9 @@ body {
 body.lock {
   overflow: hidden;
 }
-
+.wrapper {
+  overflow: hidden;
+}
 body .popup {
   opacity: 0;
   visibility: hidden;
@@ -203,6 +205,7 @@ header {
        position: relative;
     display: flex;
     flex-direction: column;
+    align-items: center;
      background: linear-gradient(180deg, #faff00 0%, #f0d512 100%);
     box-shadow: 0px 20px 30px rgba(109, 45, 9, 0.4);
     border-radius: 10px;
@@ -390,6 +393,7 @@ header {
 .theme_slider {
   max-width: 1110px;
   width: 100%;
+  margin: 0 auto;
 
   .slick-dots {
     bottom: -45px;
@@ -524,14 +528,17 @@ header {
   display: flex;
   justify-content: center;
 }
+
 .largeImage {
-  border: 1px solid gray;
+  max-width: 85%;
   margin: 0 10px;
 }
 .thumb {
   margin: 0 10px;
-  width: 100px;
-  height: 50px;
+  max-width: 100px;
+  width: 100%;
+  max-height: 50px;
+
   cursor: pointer;
   border-radius: 8px;
   border: 1px solid gray;
@@ -540,6 +547,10 @@ header {
 .thumb {
   img {
     width: 100%;
+    
+    
+      height: 100%;
+
   }
 }
 .panel {
@@ -1395,6 +1406,44 @@ footer {
 }
 //// video-audio
 .videoAudio {
+  
+  .popup.open {
+    opacity: 1;
+    visibility: visible;
+  }
+  .popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 25;
+    transition: all 0.8s ease 0s;
+  }
+
+  .popup_body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+    box-sizing: border-box;
+  }
+  .popup_content {
+       position: relative;
+    display: flex;
+    flex-direction: column;
+     background: linear-gradient(180deg, #faff00 0%, #f0d512 100%);
+    box-shadow: 0px 20px 30px rgba(109, 45, 9, 0.4);
+    border-radius: 10px;
+    padding: 30px;
+    box-sizing: border-box;
+  }
   h4 {
     @extend %orange;
     margin-bottom: 55px;
@@ -1537,14 +1586,15 @@ footer {
 }
 .videoAudio_audio_content_comment_button,
 .videoAudio_video_comment_content_button {
-  button {
+  .button {
     position: relative;
     background: linear-gradient(180deg, #faff00 0%, #eea517 100%);
     width: 40px;
     height: 40px;
     margin: 15px;
+    border-radius: 50%;
   }
-  button:after {
+  .button:after {
     content: url(../../images/svg/triangle.svg);
     width: 12px;
     height: 12px;
@@ -1571,7 +1621,7 @@ footer {
 }
 .videoAudio_video_comment_content_button {
   height: 100%;
-  button {
+  .button {
     top: calc(50% - 20px);
     left: calc(50% - 20px);
     margin: 0;

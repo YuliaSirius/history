@@ -1,42 +1,21 @@
-addSlider1();
-addSlider2();
+$(document).ready(function () {
+  $('.theme_slider').not('.slick-initialized').slick({
+    infinite: false,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    dots: true,
+    arrows: true,
+  });
+});
 
-
-window.addEventListener('resize', addSlider1);
-window.addEventListener('resize', addSlider2);
-
-
-function addSlider1() {
-  if (document.querySelector('.wrapper').offsetWidth > 550) {
-       $(document).ready(function () {
-      $('.theme_slider').not('.slick-initialized').slick({
-        infinite: false,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        dots: true,
-        arrows: true,
-      });
-    });
-  } else {
-    $(document).ready(function () {
-      $('.theme_slider').not('.slick-initialized').slick({
-        infinite: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: false,
-        arrows: true,
-      });
-    });
-    
-  }
-}
 // попап с видео theme
 let theme = document.querySelector('.theme');
 let themeTrumbs = theme.querySelectorAll('.thumb');
-let themeLargeImage = document.querySelector('.largeImage');
+let themeLargeImage = theme.querySelector('.largeImage');
 for (let i = 0; i < themeTrumbs.length; i++) {
-  themeTrumbs[i].addEventListener('click', function (e) {
-    themeLargeImage.setAttribute('src', this.getAttribute('data-src'));
+    themeTrumbs[i].addEventListener('click', function (e) {
+      themeLargeImage.setAttribute('src', this.getAttribute('data-src'));
+    
   });
 }
 
@@ -49,29 +28,16 @@ for (let i = 0; i < worksTrumbs.length; i++) {
     worksLargeImage.setAttribute('src', this.getAttribute('data-src'));
   });
 }
-function addSlider2() {
-  if (document.querySelector('.wrapper').offsetWidth > 450) {
-    $(document).ready(function () {
-      $('.works_slider').not('.slick-initialized').slick({
-        infinite: false,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        dots: false,
-        arrows: true,
-      });
-    });
-  } else {
-    $(document).ready(function () {
-      $('.works_slider').not('.slick-initialized').slick({
-        infinite: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: false,
-        arrows: true,
-      });
-    });
-  }
-}
+
+$(document).ready(function () {
+  $('.works_slider').not('.slick-initialized').slick({
+    infinite: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    dots: false,
+    arrows: true,
+  });
+});
 
 $('.mouse-parallax').on('mousemove', (e) => {
   const x = e.pageX / $(window).width();
