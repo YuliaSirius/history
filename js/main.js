@@ -15,8 +15,7 @@ let themeLargeImage = theme.querySelector('.largeImage');
 for (let i = 0; i < themeTrumbs.length; i++) {
     themeTrumbs[i].addEventListener('click', function (e) {
       themeLargeImage.setAttribute('src', this.getAttribute('data-src'));
-    
-  });
+      });
 }
 
 // попап с видео works
@@ -159,4 +158,3 @@ navButton.addEventListener('click', function (e) {
     navButtonOpen = false;
   }
 });
-// })();

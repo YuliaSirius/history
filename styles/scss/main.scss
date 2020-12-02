@@ -1,5 +1,4 @@
 @import './reset.css';
-
 html {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -98,9 +97,155 @@ h6 {
   display: flex;
   align-items: center;
 }
-button,
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 25;
+  transition: all 0.8s ease 0s;
+}
+.popup_body {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+  box-sizing: border-box;
+}
+.form {
+  position: relative;
+  max-width: 90%;
+  background: #ffc224;
+  box-shadow: 0px 10px 40px rgba(109, 45, 9, 0.5);
+  border-radius: 10px;
+  @extend %flexColumn;
+  padding: 30px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  box-sizing: border-box;
+  z-index: 15;
+  h4 {
+    color: #fff;
+    margin-bottom: 14px;
+  }
+  p {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .reviews_form_text1 {
+    margin-bottom: 10px;
+
+    color: #ffffff;
+  }
+  .reviews_form_text2 {
+    margin-bottom: 20px;
+    @extend %brown;
+  }
+
+  input,
+  select,
+  .select {
+    max-width: 350px;
+    width: 100%;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: none;
+    padding: 0 18px;
+    box-sizing: border-box;
+  }
+  input[type='submit'] {
+    border-radius: 30px;
+  }
+  input::-webkit-input-placeholder {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #a1a1a1;
+  }
+  input::-moz-placeholder {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #a1a1a1;
+  }
+  input:-ms-input-placeholder {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #a1a1a1;
+  }
+  input::-ms-input-placeholder {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #a1a1a1;
+  }
+  input::placeholder {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #a1a1a1;
+  }
+
+  label[for='checkbox'], label[for='checkbox1']  {
+    max-width: 300px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff;
+    padding-left: 40px;
+    cursor: pointer;
+    span {
+      -webkit-text-decoration-line: underline;
+      text-decoration-line: underline;
+      color: #f5652b;
+    }
+  }
+  .custom_checkbox {
+    display: none;
+  }
+  label[for='checkbox']::before, label[for='checkbox1']::before  {
+    position: absolute;
+    left: 30px;
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #ffffff;
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin-right: 13px;
+  }
+  .custom_checkbox:checked + label[for='checkbox']::before {
+    background-image: url(../../images/checkbox.png);
+    background-position: center 40%;
+    background-repeat: no-repeat;
+  }
+  .custom_checkbox:checked + label[for='checkbox1']::before {
+    background-image: url(../../images/checkbox.png);
+    background-position: center 40%;
+    background-repeat: no-repeat;
+  }
+}
+.button_Order,
 input[type='submit'] {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 230px;
   height: 50px;
   background: linear-gradient(180deg, #faff00 44%, #ecbe1c 97.92%);
@@ -117,7 +262,7 @@ input[type='submit'] {
   }
 }
 input[type='submit']:after,
-button:after {
+.button_Order:after {
   content: url(../../images/svg/icon_header_button.svg);
   display: inline-block;
   transform: translate(7px, 3px);
@@ -142,6 +287,21 @@ header {
     height: 100%;
     @extend %flex;
     justify-content: space-between;
+  }
+}
+.popup_content {
+  .form {
+    max-width: 410px;
+    width: 100%;
+  }
+}
+header {
+  .popup.open {
+    opacity: 1;
+    visibility: visible;
+  }
+  .popup_content {
+    position: relative;
   }
 }
 .header_logo {
@@ -173,40 +333,16 @@ header {
   .container {
     @extend %flexColumn;
   }
-
   .popup.open {
     opacity: 1;
     visibility: visible;
   }
-  .popup {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    top: 0;
-    left: 0;
-    opacity: 0;
-    visibility: hidden;
-    overflow-y: auto;
-    overflow-x: hidden;
-    z-index: 25;
-    transition: all 0.8s ease 0s;
-  }
-
-  .popup_body {
-    min-height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px 10px;
-    box-sizing: border-box;
-  }
   .popup_content {
-       position: relative;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-     background: linear-gradient(180deg, #faff00 0%, #f0d512 100%);
+    background: linear-gradient(180deg, #faff00 0%, #f0d512 100%);
     box-shadow: 0px 20px 30px rgba(109, 45, 9, 0.4);
     border-radius: 10px;
     padding: 30px;
@@ -279,7 +415,7 @@ header {
     color: rgba(255, 255, 255, 0.7);
     margin-bottom: 22px;
   }
-  button {
+  a {
     width: 282px;
   }
 }
@@ -458,7 +594,7 @@ header {
     box-shadow: 0px 0px 10px #faff00;
   }
   .slick-next {
-    right: 40%;
+    right: 42%;
     top: 106.3%;
   }
   .slick-next:before {
@@ -474,34 +610,12 @@ header {
     display: block;
   }
 }
-
 .theme {
   .popup.open {
     opacity: 1;
     visibility: visible;
   }
-  .popup {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    top: 0;
-    left: 0;
-    opacity: 0;
-    visibility: hidden;
-    overflow-y: auto;
-    overflow-x: hidden;
-    z-index: 25;
-    transition: all 0.8s ease 0s;
-  }
-  .popup_body {
-    min-height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px 10px;
-    box-sizing: border-box;
-  }
+
   .popup_content {
     position: relative;
     display: flex;
@@ -516,7 +630,6 @@ header {
     box-sizing: border-box;
   }
 }
-
 .gallery {
   width: 100%;
   height: 100%;
@@ -528,7 +641,6 @@ header {
   display: flex;
   justify-content: center;
 }
-
 .largeImage {
   max-width: 85%;
   margin: 0 10px;
@@ -547,10 +659,8 @@ header {
 .thumb {
   img {
     width: 100%;
-    
-    
-      height: 100%;
 
+    height: 100%;
   }
 }
 .panel {
@@ -558,7 +668,6 @@ header {
   width: 100%;
   margin-bottom: 30px;
 }
-
 // facts
 .facts {
   display: flex;
@@ -638,28 +747,6 @@ header {
     opacity: 1;
     visibility: visible;
   }
-  .popup {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    top: 0;
-    left: 0;
-    opacity: 0;
-    visibility: hidden;
-    overflow-y: auto;
-    overflow-x: hidden;
-    z-index: 25;
-    transition: all 0.8s ease 0s;
-  }
-  .popup_body {
-    min-height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px 10px;
-    box-sizing: border-box;
-  }
   .popup_content {
     position: relative;
     display: flex;
@@ -697,6 +784,7 @@ header {
   position: absolute;
   right: 10px;
   top: 10px;
+  z-index: 16;
 }
 ////photos
 .photos {
@@ -705,6 +793,9 @@ header {
     span {
       @extend %brown;
     }
+  }
+  .button_Order {
+    z-index: 9;
   }
 }
 .photos_content {
@@ -886,7 +977,6 @@ header {
     border-radius: 30px;
   }
 }
-
 .works_slider {
   button {
     box-shadow: none;
@@ -909,43 +999,21 @@ header {
     opacity: 1;
     visibility: visible;
   }
-  .popup {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    top: 0;
-    left: 0;
-    opacity: 0;
-    visibility: hidden;
-    overflow-y: auto;
-    overflow-x: hidden;
-    z-index: 25;
-    transition: all 0.8s ease 0s;
-  }
-  .popup_body {
-    min-height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px 10px;
-    box-sizing: border-box;
-  }
   .popup_content {
     position: relative;
     display: flex;
     flex-direction: column;
-    max-width: 66%;
+    justify-content: center;
+    max-width: 55%;
+    align-items: center;
     width: 100%;
     min-height: 560px;
     background: linear-gradient(180deg, #faff00 0%, #f0d512 100%);
     box-shadow: 0px 20px 30px rgba(109, 45, 9, 0.4);
     border-radius: 10px;
-    padding: 50px;
     box-sizing: border-box;
   }
 }
-
 ///// reviews
 .reviews {
   @extend %flexColumn;
@@ -965,6 +1033,12 @@ header {
       justify-content: space-around;
     }
   }
+  // .form .custom_checkbox:checked + label::before {
+  //   background-image: url(../../images/checkbox.png);
+  //   background-position: center 40%;
+  //   background-repeat: no-repeat;
+  //   background-image: red;
+  // }
 }
 .reviews_form_bg {
   width: 150%;
@@ -978,121 +1052,6 @@ header {
 .reviews_form {
   position: relative;
   width: 37%;
-  form {
-    position: relative;
-    max-width: 90%;
-    background: #ffc224;
-    box-shadow: 0px 10px 40px rgba(109, 45, 9, 0.5);
-    border-radius: 10px;
-    @extend %flexColumn;
-    padding: 30px;
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-    box-sizing: border-box;
-    z-index: 15;
-    h4 {
-      color: #fff;
-      margin-bottom: 14px;
-    }
-    p {
-      font-style: normal;
-      font-weight: 600;
-      font-size: 14px;
-      line-height: 17px;
-    }
-    .reviews_form_text1 {
-      margin-bottom: 10px;
-
-      color: #ffffff;
-    }
-    .reviews_form_text2 {
-      margin-bottom: 20px;
-      @extend %brown;
-    }
-
-    input,
-    select,
-    .select {
-      max-width: 350px;
-      width: 100%;
-      height: 50px;
-      background-color: #ffffff;
-      border-radius: 5px;
-      margin-bottom: 20px;
-      border: none;
-      padding: 0 18px;
-      box-sizing: border-box;
-    }
-    input[type='submit'] {
-      border-radius: 30px;
-    }
-    input::-webkit-input-placeholder {
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 17px;
-      color: #a1a1a1;
-    }
-    input::-moz-placeholder {
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 17px;
-      color: #a1a1a1;
-    }
-    input:-ms-input-placeholder {
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 17px;
-      color: #a1a1a1;
-    }
-    input::-ms-input-placeholder {
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 17px;
-      color: #a1a1a1;
-    }
-    input::placeholder {
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 17px;
-      color: #a1a1a1;
-    }
-
-    label[for='checkbox'] {
-      max-width: 300px;
-      font-weight: 600;
-      font-size: 14px;
-      line-height: 17px;
-      color: #ffffff;
-      padding-left: 40px;
-      span {
-        -webkit-text-decoration-line: underline;
-        text-decoration-line: underline;
-        color: #f5652b;
-      }
-    }
-    .custom_checkbox {
-      display: none;
-    }
-    label[for='checkbox']::before {
-      position: absolute;
-      left: 30px;
-      content: '';
-      display: inline-block;
-      width: 25px;
-      height: 25px;
-      border: 2px solid #ffffff;
-      box-sizing: border-box;
-      border-radius: 3px;
-      margin-right: 13px;
-    }
-
-    .custom_checkbox:checked + label::before {
-      background-image: url(../../images/checkbox.png);
-      background-position: center 40%;
-      background-repeat: no-repeat;
-    }
-  }
 }
 .reviews .scroll {
   width: 45%;
@@ -1406,39 +1365,16 @@ footer {
 }
 //// video-audio
 .videoAudio {
-  
   .popup.open {
     opacity: 1;
     visibility: visible;
   }
-  .popup {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    top: 0;
-    left: 0;
-    opacity: 0;
-    visibility: hidden;
-    overflow-y: auto;
-    overflow-x: hidden;
-    z-index: 25;
-    transition: all 0.8s ease 0s;
-  }
-
-  .popup_body {
-    min-height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px 10px;
-    box-sizing: border-box;
-  }
   .popup_content {
-       position: relative;
+    position: relative;
     display: flex;
     flex-direction: column;
-     background: linear-gradient(180deg, #faff00 0%, #f0d512 100%);
+    align-items: center;
+    background: linear-gradient(180deg, #faff00 0%, #f0d512 100%);
     box-shadow: 0px 20px 30px rgba(109, 45, 9, 0.4);
     border-radius: 10px;
     padding: 30px;

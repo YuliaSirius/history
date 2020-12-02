@@ -38,7 +38,57 @@
             </div>
           </div>
           <div class="header_button">
-            <button>Заказать фильм</button>
+            <a href="popupForm" class="popup_link button_Order"
+              >Заказать фильм</a
+            >
+          </div>
+        </div>
+        <div id="popupForm" class="popup">
+          <div class="popup_body">
+            <div class="popup_content">
+              <a href="#" class="popup_close">
+                <img src="./images/vector.png" alt="close" />
+              </a>
+              <form action="#" class="form">
+                <h4>
+                  Оставьте заявку<br />
+                  на создание слайд-шоу
+                </h4>
+                <p class="reviews_form_text1">
+                  Заполните форму, и мы свяжемся с Вами<br />
+                  через 5 минут.
+                </p>
+                <p class="reviews_form_text2">
+                  *Поля для обязательного заполнения
+                </p>
+                <input type="text" placeholder="Имя*" />
+                <input type="email" placeholder="Email*" />
+                <label class="select">
+                  <select name="sort">
+                    <option>Категория слайд-шоу</option>
+                    <option value="anniversary">Юбилей</option>
+                    <option value="birt">Выписка из роддома</option>
+                    <option value="birthday">День рождения</option>
+                    <option value="wedding">Свадьба</option>
+                    <option value="lovestory">Lovestory</option>
+                    <option value="children">Детский праздник</option>
+                    <option value="travel">Фильм о путешествии</option>
+                    <option value="video">Видеомонтаж</option>
+                    <option value="promotional">Рекламное слайд-шоу</option>
+                    <option value="memory">Слайд-шоу вечная память</option>
+                    <option value="family">Семейный фильм</option>
+                  </select>
+                </label>
+
+                <input type="submit" value="Заказать слайд-шоу" />
+
+                <input id="checkbox1" type="checkbox" class="custom_checkbox" />
+                <label for="checkbox1"
+                  >Я согласен(а) на обработку персональных данных.
+                  <span>Соглашение</span></label
+                >
+              </form>
+            </div>
           </div>
         </div>
       </header>
@@ -57,7 +107,9 @@
                   в памяти самые яркие события и поделиться ими с близкими.
                   Закажите красивые слайд-шоу из фотографий с музыкой!
                 </p>
-                <button>Заказать крутой фильм!</button>
+                <a href="popupForm" class="popup_link button_Order"
+                  >Заказать крутой фильм!</a
+                >
               </div>
               <div class="createfilms_title_video">
                 <div class="createfilms_mouse-parallax_bg"></div>
@@ -72,21 +124,16 @@
                       <a href="#" class="popup_close">
                         <img src="./images/vector.png" alt="close" />
                       </a>
-                                               <iframe
-                            class="largeImage"
-                            src="https://player.vimeo.com/video/59534650"
-                            width="640"
-                            height="360"
-                                                        allowfullscreen
-                            ></iframe>                                          
-                       
+                      <iframe
+                        class="largeImage"
+                        src="https://player.vimeo.com/video/59534650"
+                        width="640"
+                        height="360"
+                        allowfullscreen
+                      ></iframe>
                     </div>
                   </div>
                 </div>
-
-
-
-
               </div>
             </div>
             <div class="createfilms_clients">
@@ -250,8 +297,7 @@
                       src="https://player.vimeo.com/video/157328792"
                       width="640"
                       height="360"
-                      
-                      ></iframe>
+                    ></iframe>
                   </div>
                   <div class="thumbs">
                     <div
@@ -453,7 +499,9 @@
                   заказчиком. Каждый нюанс обсуждается, и подбираются лучшие
                   решения. Результат должен нравится в первую очередь Вам.
                 </p>
-                <button>Хочу крутой фильм!</button>
+                <a href="popupForm" class="popup_link button_Order"
+                  >Хочу крутой фильм!</a
+                >
               </div>
             </div>
           </div>
@@ -539,50 +587,14 @@
                   <a href="#" class="popup_close">
                     <img src="./images/vector.png" alt="close" />
                   </a>
-                  <div class="gallery">
-                    <div class="panel">
-                      <iframe
-                        class="largeImage"
-                        src="https://player.vimeo.com/video/59534650"
-                        width="640"
-                        height="360"
-                        allowfullscreen
-                        >
-                      </iframe>
-                    </div>
-                    <div class="thumbs">
-                      <div
-                        class="thumb"
-                        data-src="https://player.vimeo.com/video/59534650"
-                      >
-                        <img src="./images/celebration.jpg" alt="image" />
-                      </div>
-                      <div
-                        class="thumb"
-                        data-src="https://player.vimeo.com/video/157328792"
-                      >
-                        <img src="./images/family.jpg" alt="image" />
-                      </div>
-                      <div
-                        class="thumb"
-                        data-src="https://player.vimeo.com/video/37578849"
-                      >
-                        <img src="./images/travel.jpg" alt="image" />
-                      </div>
-                      <div
-                        class="thumb"
-                        data-src="https://player.vimeo.com/video/20937786"
-                      >
-                        <img src="./images/celebration.jpg" alt="image" />
-                      </div>
-                      <div
-                        class="thumb"
-                        data-src="https://player.vimeo.com/video/20937786"
-                      >
-                        <img src="./images/family.jpg" alt="image" />
-                      </div>
-                    </div>
-                  </div>
+                  <iframe
+                    class="largeImage"
+                    src="https://player.vimeo.com/video/59534650"
+                    width="640"
+                    height="360"
+                    allowfullscreen
+                  >
+                  </iframe>
                 </div>
               </div>
             </div>
@@ -595,7 +607,7 @@
             <div>
               <div class="reviews_form">
                 <div class="reviews_form_bg"></div>
-                <form action="#">
+                <form action="#" class="form">
                   <h4>
                     Оставьте заявку<br />
                     на создание слайд-шоу
@@ -787,101 +799,93 @@
               <h4>Видео отзывы</h4>
               <div class="scroll_video baron">
                 <a href="#popup5" class="popup_link">
-                <div class="videoAudio_video_comment">
-            
-                  <div class="videoAudio_video_comment_content">
-                                       <div class="videoAudio_video_comment_content_button">
-                    <div class="button"></div>
+                  <div class="videoAudio_video_comment">
+                    <div class="videoAudio_video_comment_content">
+                      <div class="videoAudio_video_comment_content_button">
+                        <div class="button"></div>
+                      </div>
+                    </div>
+
+                    <div class="videoAudio_video_comment_text">
+                      <p>Любовь Михайловна</p>
+                      <p>Слайд-шоу на юбилей</p>
+                      <p>17 февраля 2020</p>
                     </div>
                   </div>
-                
-                  <div class="videoAudio_video_comment_text">
-                    <p>Любовь Михайловна</p>
-                    <p>Слайд-шоу на юбилей</p>
-                    <p>17 февраля 2020</p>
-                  </div>
-                </div>
-              </a>
-              <a href="#popup5" class="popup_link">
-                <div class="videoAudio_video_comment">
-                  <div class="videoAudio_video_comment_content">
-                    <div class="videoAudio_video_comment_content_button">
-                      <div class="button"></div>
-                    </div>
-                  </div>
-                  <div class="videoAudio_video_comment_text">
-                    <p>Любовь Михайловна</p>
-                    <p>Слайд-шоу на юбилей</p>
-                    <p>17 февраля 2020</p>
-                  </div>
-                </div>
-              </a>
+                </a>
                 <a href="#popup5" class="popup_link">
-                <div class="videoAudio_video_comment">
-                  <div class="videoAudio_video_comment_content">
-                    <div class="videoAudio_video_comment_content_button">
-                      <div class="button"></div>
+                  <div class="videoAudio_video_comment">
+                    <div class="videoAudio_video_comment_content">
+                      <div class="videoAudio_video_comment_content_button">
+                        <div class="button"></div>
+                      </div>
+                    </div>
+                    <div class="videoAudio_video_comment_text">
+                      <p>Любовь Михайловна</p>
+                      <p>Слайд-шоу на юбилей</p>
+                      <p>17 февраля 2020</p>
                     </div>
                   </div>
-                  <div class="videoAudio_video_comment_text">
-                    <p>Любовь Михайловна</p>
-                    <p>Слайд-шоу на юбилей</p>
-                    <p>17 февраля 2020</p>
-                  </div>
-                </div>
-              </a>
+                </a>
                 <a href="#popup5" class="popup_link">
-                <div class="videoAudio_video_comment">
-                  <div class="videoAudio_video_comment_content">
-                    <div class="videoAudio_video_comment_content_button">
-                      <div class="button"></div>
+                  <div class="videoAudio_video_comment">
+                    <div class="videoAudio_video_comment_content">
+                      <div class="videoAudio_video_comment_content_button">
+                        <div class="button"></div>
+                      </div>
+                    </div>
+                    <div class="videoAudio_video_comment_text">
+                      <p>Любовь Михайловна</p>
+                      <p>Слайд-шоу на юбилей</p>
+                      <p>17 февраля 2020</p>
                     </div>
                   </div>
-                  <div class="videoAudio_video_comment_text">
-                    <p>Любовь Михайловна</p>
-                    <p>Слайд-шоу на юбилей</p>
-                    <p>17 февраля 2020</p>
-                  </div>
-                </div>
-              </a>
+                </a>
                 <a href="#popup5" class="popup_link">
-                <div class="videoAudio_video_comment">
-                  <div class="videoAudio_video_comment_content">
-                    <div class="videoAudio_video_comment_content_button">
-                      <div class="button"></div>
+                  <div class="videoAudio_video_comment">
+                    <div class="videoAudio_video_comment_content">
+                      <div class="videoAudio_video_comment_content_button">
+                        <div class="button"></div>
+                      </div>
+                    </div>
+                    <div class="videoAudio_video_comment_text">
+                      <p>Любовь Михайловна</p>
+                      <p>Слайд-шоу на юбилей</p>
+                      <p>17 февраля 2020</p>
                     </div>
                   </div>
-                  <div class="videoAudio_video_comment_text">
-                    <p>Любовь Михайловна</p>
-                    <p>Слайд-шоу на юбилей</p>
-                    <p>17 февраля 2020</p>
+                </a>
+                <a href="#popup5" class="popup_link">
+                  <div class="videoAudio_video_comment">
+                    <div class="videoAudio_video_comment_content">
+                      <div class="videoAudio_video_comment_content_button">
+                        <div class="button"></div>
+                      </div>
+                    </div>
+                    <div class="videoAudio_video_comment_text">
+                      <p>Любовь Михайловна</p>
+                      <p>Слайд-шоу на юбилей</p>
+                      <p>17 февраля 2020</p>
+                    </div>
+                  </div>
+                </a>
+
+                <div id="popup5" class="popup">
+                  <div class="popup_body">
+                    <div class="popup_content">
+                      <a href="#" class="popup_close">
+                        <img src="./images/vector.png" alt="close" />
+                      </a>
+                      <iframe
+                        class="largeImage"
+                        src="https://player.vimeo.com/video/157328792"
+                        width="640"
+                        height="360"
+                        allowfullscreen
+                      ></iframe>
+                    </div>
                   </div>
                 </div>
-              </a>
-
-
-              <div id="popup5" class="popup">
-                <div class="popup_body">
-                  <div class="popup_content">
-                    <a href="#" class="popup_close">
-                      <img src="./images/vector.png" alt="close" />
-                    </a>
-                                             <iframe
-                          class="largeImage"
-                          src="https://player.vimeo.com/video/157328792"
-                          width="640"
-                          height="360"
-                          
-                          allowfullscreen
-                          ></iframe>
-                                          
-                     
-                  </div>
-                </div>
-              </div>
-
-
-
 
                 <div class="videoAudio_video_counter">
                   <p>1/3</p>
@@ -975,7 +979,8 @@
                   каких-либо ограничений.
                 </p>
               </div>
-              <button>Хочу крутой фильм!</button>
+              <a href="popupForm" class="popup_link button_Order"
+                >Хочу крутой фильм!</a>
             </div>
             <div class="music_content">
               <img src="./images/music.png" alt="image" />
@@ -1003,8 +1008,10 @@
             <a href="#">Наши видео</a>
           </div>
           <div>
-            <button>Заказать фильм</button>
-          </div>
+
+            <a href="popupForm" class="popup_link button_Order"
+            >Заказать фильм</a>
+                     </div>
         </div>
       </footer>
     </div>
@@ -1013,5 +1020,5 @@
     <script src="https://cdn.jsdelivr.net/npm/baron@3.0.3/baron.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/popup.js"></script>
-   </body>
+  </body>
 </html>
