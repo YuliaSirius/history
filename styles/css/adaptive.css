@@ -442,7 +442,7 @@ input[type=submit] {
   }
 
   .videoAudio_audio {
-    margin: 40px auto 0 auto;
+    margin: 80px auto 0 auto;
   }
 
   .videoAudio {
@@ -482,6 +482,10 @@ input[type=submit] {
   .works_content_item {
     max-width: 250px;
     height: 200px;
+  }
+
+  .works_content > a {
+    max-width: 250px;
   }
 }
 @media all and (max-width: 550px) {

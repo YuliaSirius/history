@@ -1,68 +1,77 @@
-
-(function () {
-
-
+addSlider1();
+addSlider2();
 
 
+window.addEventListener('resize', addSlider1);
+window.addEventListener('resize', addSlider2);
 
-if (document.querySelector('.wrapper').offsetWidth > 550) {
-  $(document).ready(function () {
-    $('.theme_slider').slick({
-      infinite: false,
-      slidesToShow: 3,
-      slidesToScroll: 3,
-      dots: true,
-      arrows: true,
+
+function addSlider1() {
+  if (document.querySelector('.wrapper').offsetWidth > 550) {
+       $(document).ready(function () {
+      $('.theme_slider').not('.slick-initialized').slick({
+        infinite: false,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        dots: true,
+        arrows: true,
+      });
     });
-  });
-} else {
-  $(document).ready(function () {
-    $('.theme_slider').slick({
-      infinite: false,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      dots: false,
-      arrows: true,
+  } else {
+    $(document).ready(function () {
+      $('.theme_slider').not('.slick-initialized').slick({
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true,
+      });
     });
+    
+  }
+}
+// попап с видео theme
+let theme = document.querySelector('.theme');
+let themeTrumbs = theme.querySelectorAll('.thumb');
+let themeLargeImage = document.querySelector('.largeImage');
+for (let i = 0; i < themeTrumbs.length; i++) {
+  themeTrumbs[i].addEventListener('click', function (e) {
+    themeLargeImage.setAttribute('src', this.getAttribute('data-src'));
   });
 }
 
-$('.thumbs').delegate('img', 'click', function () {
-  $('.largeImage').attr('src', $(this).attr('src').replace('thumb', 'large'));
-});
-
-
-if (document.querySelector('.wrapper').offsetWidth > 450) {
-  $(document).ready(function () {
-    $('.works_slider').slick({
-      infinite: false,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      dots: false,
-      arrows: true,
-    });
-  });
-} else {
-  $(document).ready(function () {
-    $('.works_slider').slick({
-      infinite: false,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      dots: false,
-      arrows: true,
-    });
+// попап с видео works
+let works = document.querySelector('.works');
+let worksTrumbs = works.querySelectorAll('.thumb');
+let worksLargeImage = works.querySelector('.largeImage');
+for (let i = 0; i < worksTrumbs.length; i++) {
+  worksTrumbs[i].addEventListener('click', function (e) {
+    worksLargeImage.setAttribute('src', this.getAttribute('data-src'));
   });
 }
-
-$(document).ready(function () {
-  $('.works_slider').slick({
-    infinite: false,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    dots: false,
-    arrows: true,
-  });
-});
+function addSlider2() {
+  if (document.querySelector('.wrapper').offsetWidth > 450) {
+    $(document).ready(function () {
+      $('.works_slider').not('.slick-initialized').slick({
+        infinite: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true,
+      });
+    });
+  } else {
+    $(document).ready(function () {
+      $('.works_slider').not('.slick-initialized').slick({
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true,
+      });
+    });
+  }
+}
 
 $('.mouse-parallax').on('mousemove', (e) => {
   const x = e.pageX / $(window).width();
@@ -184,4 +193,4 @@ navButton.addEventListener('click', function (e) {
     navButtonOpen = false;
   }
 });
-})()
+// })();
